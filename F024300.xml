@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>HD033176</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority/>
+                <idno type="filename"/>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>museum/archive</repository>
+                        <idno>inventory number</idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc ana="#slab">
+                            <supportDesc ana="#stone.marble">
+                                <support> 
+                                    <p>Statue base made of marble with profile-framed inscription
+                                        field.</p>
+                                    <dimensions type="surface" unit="cm">
+                                        <height>99</height>
+                                        <width>64.5</width>
+                                        <depth>23</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#complete">
+                                    <p>Complete epigraph.</p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1" writtenLines="6">
+                                    <p>There is one column and 20 lines. The letters decrease in
+                                        size down the rows of text.</p>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>description of letters, possibly including <height>letter-heights</height>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>Aquileia</origPlace>
+                            <origDate>122 BCE – 150 BCE</origDate>
+                        </origin>
+                        <provenance type="found"> Aquileia
+                        </provenance>
+                       
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+   <facsimile>
+        <surface>
+            <desc/>
+            <graphic url="F024300"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <ab>
+                    <lb n="1"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/platorius-e927310"><expan><abbr>A</abbr><ex>ulo</ex></expan>Platorio <expan><abbr>A</abbr><ex>uli</ex></expan><g type="interpunct"/><expan><abbr>f</abbr><ex>ilio</ex></expan>
+                    <lb n="2"/><expan><abbr>Serg</abbr><ex>ia</ex></expan><g type="interpunct"/>Nepoti
+                    <lb n="3"/>Aponio Italico
+                    <lb n="4"/>Maniliano
+                    <lb n="5"/><expan><abbr>C</abbr><ex>aio</ex></expan><g type="interpunct"/> Licinio <g type="interpunct"/>Pollioni</persName><note>Official under Trajan and Hadrian</note>
+                    <lb n="6"/><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan><g type="interpunct"/>auguri <expan><abbr>legat</abbr><ex>o</ex></expan> <expan><abbr>Aug</abbr><ex>usti</ex></expan>
+                    <lb n="7"/>pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> <expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/991322">Bri
+                    <lb n="8" break="no"/>tanniae</placeName> <expan><abbr>leg</abbr><ex>ato</ex></expan> pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> pro
+                    <lb n="9" break="no"/><expan><abbr>vinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/991337"><expan><abbr>German</abbr><ex>iae</ex></expan></placeName> <expan><abbr>inferior</abbr><ex>is</ex></expan>
+                    <lb n="10"/><expan><abbr>leg</abbr><ex>ato</ex></expan> pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> <expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/992078"><expan><abbr>Thrac</abbr><ex>iae</ex></expan></placeName>
+                    <lb n="11"/><expan><abbr>leg</abbr><ex>ato</ex></expan> <expan><abbr>leg</abbr><ex>ionis</ex></expan>I Adiutricis
+                    <lb n="12"/><expan>quaest<abbr></abbr><ex>ori</ex></expan><expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/981531"><expan><abbr>Maced</abbr><ex>oniae</ex></expan></placeName>
+                    <lb n="13"/><expan><abbr>curat</abbr><ex>ori</ex></expan> viarum <placeName>Cassiae
+                    <lb n="14"/>Clodiae Ciminiae</placeName> novae
+                    <lb n="15"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/traianus-e1218650?s.num=1&amp;s.f.s2_parent=s.f.book.brill-s-new-pauly&amp;s.q=Trajan#e1218660">Traianae</persName> candidato divi
+                    <lb n="16"/><persName>Traiani</persName> <expan><abbr>trib</abbr><ex>uno</ex></expan> <expan><abbr>mil</abbr><ex>itum</ex></expan> <expan><abbr>leg</abbr><ex>ionis</ex></expan> XXII
+                    <lb n="17"/><expan><abbr>Primigen</abbr><ex>iae</ex></expan> <expan><abbr>p</abbr><ex>iae</ex></expan> <expan><abbr>f</abbr><ex>idelis</ex></expan> <expan><abbr>praet</abbr><ex>ori</ex></expan> <expan><abbr>trib</abbr><ex>uno</ex></expan>
+                    <lb n="18"/><expan><abbr>pleb</abbr><ex>is</ex></expan> III <expan><abbr>vir</abbr><ex>o</ex></expan> capitali
+                    <lb n="19"/>patrono
+                    <lb n="20"/><expan><abbr>d</abbr><ex>ecreto</ex></expan> <expan><abbr>d</abbr><ex>ecurionum</ex></expan>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p>external apparatus criticus (if applicable)</p>
+            </div>
+            <div type="translation">
+                <p>Aulus Platorius Nepos, son of Aulus, from Sergia, Aponius Italicus Manilianus, Gaius Licinius Pollio, Consul, Augur.... </p>
+            </div>
+            <div type="commentary">
+                <p>To Rome I have given time and distance: and this memorial shows it by listing </p>
+            </div>
+            <div type="bibliography">
+                <p>bibliography of previous editions, discussion, etc.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
