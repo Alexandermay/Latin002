@@ -68,18 +68,18 @@
         <body>
             <div type="edition" xml:space="preserve">
                 <ab>
-                    <lb n="1"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/platorius-e927310"><expan><abbr>A</abbr><ex>ulo</ex></expan>Platorio <expan><abbr>A</abbr><ex>uli</ex></expan><g type="interpunct"/><expan><abbr>f</abbr><ex>ilio</ex></expan>
-                    <lb n="2"/><expan><abbr>Serg</abbr><ex>ia</ex></expan><g type="interpunct"/>Nepoti
-                    <lb n="3"/>Aponio Italico
-                    <lb n="4"/>Maniliano
-                    <lb n="5"/><expan><abbr>C</abbr><ex>aio</ex></expan><g type="interpunct"/> Licinio <g type="interpunct"/>Pollioni</persName><note>Official under Trajan and Hadrian</note>
-                    <lb n="6"/><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan><g type="interpunct"/>auguri <expan><abbr>legat</abbr><ex>o</ex></expan> <expan><abbr>Aug</abbr><ex>usti</ex></expan>
+                    <lb n="1"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/platorius-e927310"><w lemma="Aulus" ana="Dative"><expan><abbr>A</abbr><ex>ulo</ex></expan></w><w lemma="Platorius" ana="Dative">Platorio</w> <w lemma="Aulus" ana="Genitive"><expan><abbr>A</abbr><ex>uli</ex></expan></w><g type="interpunct"/><w lemma="filius" ana="Dative"><expan><abbr>f</abbr><ex>ilio</ex></expan></w>
+                    <lb n="2"/><w lemma="Sergia" ana ="Ablative" lemmaRef="https://en.wikipedia.org/wiki/Sergia_(gens)"><expan><abbr>Serg</abbr><ex>iā</ex></expan></w><g type="interpunct"/><w lemma="Nepotus" ana="Dative">Nepoti</w>
+                    <lb n="3"/><w lemma="Aponius" ana="Dative">Aponio</w> <w lemma="Italicus" ana="Dative">Italico</w>
+                    <lb n="4"/><w lemma="Manilianus" ana="Dative">Maniliano</w>
+                    <lb n="5"/><w lemma="Caius" ana="Dative"><expan><abbr>C</abbr><ex>aio</ex></expan></w><g type="interpunct"/> <w lemma="Licinius" ana="Dative">Licinio</w> <g type="interpunct"/><w lemma="Pollionus" ana="Dative">Pollioni</w></persName><note>Official under Trajan and Hadrian</note>
+                    <lb n="6"/><w lemma="consul" ana="Dative"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></w><g type="interpunct"/><w lemma="augur" ana="Dative">auguri</w> <expan><abbr>legat</abbr><ex>o</ex></expan> <expan><abbr>Aug</abbr><ex>usti</ex></expan>
                     <lb n="7"/>pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> <expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/991322">Bri
                     <lb n="8" break="no"/>tanniae</placeName> <expan><abbr>leg</abbr><ex>ato</ex></expan> pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> pro
-                    <lb n="9" break="no"/><expan><abbr>vinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/991337"><expan><abbr>German</abbr><ex>iae</ex></expan></placeName> <expan><abbr>inferior</abbr><ex>is</ex></expan>
+                    <lb n="9" break="no"/><expan><abbr>vinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/991337"><expan><abbr>German</abbr><ex>iae</ex></expan><expan><abbr>inferior</abbr><ex>is</ex></expan></placeName>
                     <lb n="10"/><expan><abbr>leg</abbr><ex>ato</ex></expan> pro <expan><abbr>pr</abbr><ex>aetore</ex></expan> <expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/992078"><expan><abbr>Thrac</abbr><ex>iae</ex></expan></placeName>
                     <lb n="11"/><expan><abbr>leg</abbr><ex>ato</ex></expan> <expan><abbr>leg</abbr><ex>ionis</ex></expan>I Adiutricis
-                    <lb n="12"/><expan>quaest<abbr></abbr><ex>ori</ex></expan><expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/981531"><expan><abbr>Maced</abbr><ex>oniae</ex></expan></placeName>
+                    <lb n="12"/><expan>quaest<abbr/><ex>ori</ex></expan><expan><abbr>provinc</abbr><ex>iae</ex></expan> <placeName ref="https://pleiades.stoa.org/places/981531"><expan><abbr>Maced</abbr><ex>oniae</ex></expan></placeName>
                     <lb n="13"/><expan><abbr>curat</abbr><ex>ori</ex></expan> viarum <placeName>Cassiae
                     <lb n="14"/>Clodiae Ciminiae</placeName> novae
                     <lb n="15"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/traianus-e1218650?s.num=1&amp;s.f.s2_parent=s.f.book.brill-s-new-pauly&amp;s.q=Trajan#e1218660">Traianae</persName> candidato divi
@@ -87,14 +87,14 @@
                     <lb n="17"/><expan><abbr>Primigen</abbr><ex>iae</ex></expan> <expan><abbr>p</abbr><ex>iae</ex></expan> <expan><abbr>f</abbr><ex>idelis</ex></expan> <expan><abbr>praet</abbr><ex>ori</ex></expan> <expan><abbr>trib</abbr><ex>uno</ex></expan>
                     <lb n="18"/><expan><abbr>pleb</abbr><ex>is</ex></expan> III <expan><abbr>vir</abbr><ex>o</ex></expan> capitali
                     <lb n="19"/>patrono
-                    <lb n="20"/><expan><abbr>d</abbr><ex>ecreto</ex></expan> <expan><abbr>d</abbr><ex>ecurionum</ex></expan>
+                    <lb n="20"/><expan><abbr>d</abbr><ex>ecreto</ex></expan> <w lemma="decuriō" ana="Genative plural"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></w>
                 </ab>
             </div>
             <div type="apparatus">
                 <p>external apparatus criticus (if applicable)</p>
             </div>
             <div type="translation">
-                <p>Aulus Platorius Nepos, son of Aulus, from Sergia, Aponius Italicus Manilianus, Gaius Licinius Pollio, Consul, Augur.... </p>
+                <p>Aulus Platorius Nepos, son of Aulus, from the Sergia, Aponius Italicus Manilianus, Gaius Licinius Pollio, Consul, Augur.... </p>
             </div>
             <div type="commentary">
                 <p>To Rome I have given time and distance: and this memorial shows it by listing </p>

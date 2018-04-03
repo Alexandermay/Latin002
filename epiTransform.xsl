@@ -526,17 +526,25 @@
     </xsl:template>
     
     <xsl:template match="//persName[@ref]">
-        <a class="tooltip" style="color: #2E9AFE; text-decoration:none">
+        <a style="color: #2E9AFE; text-decoration:none">
             <xsl:attribute name="href">
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
             <xsl:attribute name="target">
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
-            <xsl:apply-templates/>
-            <span class="tooltiptext">Learn more about this person.</span>
+            <xsl:apply-templates/>          
         </a>
     </xsl:template>
+ 
+    <xsl:template match=".//w[@lemma]">
+        <span class="tooltip" style="color: ; text-decoration:none">
+            <xsl:apply-templates/>
+            <span class="tooltiptext"><xsl:value-of select="@ana"/> form of <xsl:value-of select="@lemma"/></span>
+        </span>
+        
+    </xsl:template>      
+    
 
     <xsl:template match="//ptr">
         <a>
