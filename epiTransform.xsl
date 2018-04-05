@@ -198,7 +198,7 @@
                     }
                     
                    a:link{
-                        color: #1b5dA9;
+                        color: black;
                         text-decoration: none;
                     }
                     
