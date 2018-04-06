@@ -217,6 +217,9 @@
                     text-decoration: underline;
                     }
                     
+                    
+                    
+                    
                     /* Tooltip container */
                     .tooltip{
                         position: relative;
@@ -267,7 +270,9 @@
                         background: rgba(0, 0, 0, 0.25);
                         border: 2px solid rgba(0, 0, 0, 0);
                         cursor: url(blank.png), url(blank.cur), none;
-                    }</style>
+                    }
+                               
+                </style>
             </head>
             <body>
                 <div id="wrapper">
@@ -385,6 +390,7 @@
         <p style="color:#BDBDBD">(This is supplied text)</p>
         <p style="color:#FF8000">This is a place name</p>
         <p style="color:#2E9AFE">This is a personal name</p>
+        <p style="color:#CD853F;">This is a corporate entity, like a legion or office</p>
         <br/>
     </xsl:template>
 
@@ -448,7 +454,7 @@
     <!-- P and AB -->
 
     <xsl:template match="p">
-        <xsl:apply-templates/>
+       <p><xsl:apply-templates/></p>
     </xsl:template>
 
     <xsl:template match="ab">
@@ -510,7 +516,7 @@
         <xsl:choose>
             <xsl:when test="$inline-notes">
                 <sup>
-                    <xsl:value-of select="index-of(., .)"/>
+                    <xsl:value-of select="index-of(//note, .)"/>
                 </sup>
             </xsl:when>
             <xsl:otherwise/>
