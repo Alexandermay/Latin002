@@ -24,20 +24,16 @@
     -->
     <xsl:variable name="inline-notes">0</xsl:variable>
     <xsl:variable name="expan" select="count(//expan)"/>
-    <xsl:variable name="place" select="count(//placeName)"/>
-    <xsl:variable name="people" select="count(//persName)"/>
-    <!-- Variables for counting our content
-    <xsl:variable name="supplied_lost" select="count(//supplied[@reason='lost'])"/>
-    <xsl:variable name="num_supplied"  select="count( //supplied )"/>
-    <xsl:variable name="high_cert" select="count( //supplied[@cert='high'] )"/>
-    <xsl:variable name="interpunct" select="count(//g[@type='interpunct'])"/>
-    <xsl:variable name="apex" select="count(.//hi[@rend='apex'])"/>
-    <xsl:variable name="text" select="string-length(translate(.//div[@type='edition']/ab,'&#x20;&#x9;&#xD;&#xA;',''))"/>
-    <xsl:variable name="note" select="string-length(normalize-space(.//div[@type='edition']/ab/note))"/>
-       -->
+    <xsl:variable name="place" select="count(//div[@type = 'edition']/ab/placeName)"/>
+    <xsl:variable name="people" select="count(//div[@type = 'edition']/ab/persName)"/>
+    <xsl:variable name="word" select="count(.//w)"/>
+    <xsl:variable name="nominative" select="count(//w[contains(@ana, 'Nominative')])"/>
+    <xsl:variable name="genitive" select="count(//w[contains(@ana, 'Genitive')])"/>
+    <xsl:variable name="dative" select="count(//w[contains(@ana, 'Dative')])"/>
+    <xsl:variable name="accusative" select="count(//w[contains(@ana, 'Accusative')])"/>
+    <xsl:variable name="ablative" select="count(//w[contains(@ana, 'Ablative')])"/>
 
     <!-- This template writes the entire document into an HTML page -->
-
 
     <!-- We are matching the root, if there is a root, then we are going to input some literal content, in this case, some html  -->
     <xsl:template match="/">
@@ -47,245 +43,24 @@
                     <xsl:value-of select=".//title"/>
                 </title>
 
-                <!-- In-line CSS for our web page -->
+                <!-- CSS for our web page -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-                <style type="text/css">
-                    #header{
-                        background-image: url(images/site_header.png);
-                        background-repeat: no-repeat;
-                        height: 115px;
-                        width: 97.4%;
-                        min-width: 905px;
-                        max-width: 995px;
-                        float: left;
-                        margin: auto;
-                        color: white;
-                        background-color: #FFFFFE;
-                        text-align: center;
-                        border-bottom: 1px solid gray;
-                    }
-                    #mainnav{
-                        font-size: 90%;
-                        font-weight: bold;
-                        font-family: Helvetica, Geneva, Arial, sans-serif;
-                    }
-                    #mainnav ul{
-                        list-style-type: none;
-                        margin-top: 95px;
-                        margin-right: 0px;
-                        margin-left: 255px;
-                        margin-bottom: 0px;
-                        padding-top: 0px;
-                        overflow: hidden;
-                        width: auto;
-                        min-width: 225px;
-                        max-width: 767px;
-                    }
-                    #mainnav li{
-                        float: right;
-                    }
-                    #mainnav a:link,
-                    #mainnav a:visited{
-                        display: inline;
-                        padding: 0.5em 1.5em 0.5em 1.5em;
-                        color: #FFF;
-                        background-color: #000;
-                        text-decoration: none;
-                        border-top: 0px;
-                        border-right: 2px solid white;
-                        border-left: 0px;
-                        border-bottom: 1px solid #b4b4b4;
-                    }
-                    #mainnav a:hover{
-                        color: #FFF;
-                        background-color: #558097;
-                    }
-                    * html #mainnav a{
-                        display: inline;
-                    }
-                    #about #mainnav li.about a:link{
-                        background-color: #558097;
-                        color: #000;
-                    }
-                    #bibliography #mainnav li.bibliography a:link{
-                        background-color: #558097;
-                        color: #000;
-                    }
-                    body{
-                        background: #ffffff;
-                        font-size: 85%;
-                        font-family: Helvetica, Geneva, Arial, sans-serif;
-                        color: #363636;
-                        margin: auto;
-                        line-height: 1.33em
-                    }
-                    h1{
-                        font-size: 185%;
-                        color: #000000;
-                        font-weight: bold;
-                        line-height: 1.7em;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    h2{
-                        font-size: 140%;
-                        color: #484848;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        line-height: 1.6em;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    h3{
-                        font-size: 125%;
-                        color: #484848;
-                        font-weight: bold;
-                    }
-                    h4{
-                        font-size: 115%;
-                        color: #101010;
-                        font-weight: bold;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    h5{
-                        font-size: 105%;
-                        color: #383838;
-                        font-weight: bold;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                    h6{
-                        font-size: 90%;
-                        color: #404040;
-                    
-                        margin: 0px;
-                        padding: 2px 0px;
-                    }
-                    #wrapper{
-                        /* float: left; */
-                        width: 55%;
-                        min-width: 805px;
-                        max-width: 860px;
-                        margin: auto;
-                    }
-                    #content_main{
-                        display: block;
-                        float: left;
-                        width: 86%;
-                        padding-left: 25px;
-                        margin: auto;
-                    }
-                    .shrinktofit{
-                        width: 45%
-                    }
-                    .center{
-                        text-align: center;
-                    }
-                    .left{
-                        position: relative;
-                        margin-left: 2em;
-                    }
-                    p{
-                        margin-top: .25em;
-                        margin-bottom: .25em;
-                    }
-                    hr{
-                        color: #888833;
-                    }<!--The .class selector selects elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the name of the class.-->
-                    .note{
-                        color: gray;
-                    }
-                    
-                   a:link{
-                        color: black;
-                        text-decoration: none;
-                    }
-                    
-                    a:visited{
-                        color: #505151;
-                        text-decoration: none;
-                    }
-                    
-                    a:hover{
-                    color: 	#ffbf00;
-                    text-decoration: none;
-                    }
-                    
-                    a:hover.bibLink{
-                    color: 	black;
-                    text-decoration: underline;
-                    }
-                    
-                    
-                    
-                    
-                    /* Tooltip container */
-                    .tooltip{
-                        position: relative;
-                    }
-                    
-                    /* Tooltip text */
-                    .tooltip .tooltiptext{
-                        visibility: hidden;
-                        width: 120px;
-                        background-color: #555;
-                        color: #fff;
-                        text-align: center;
-                        padding: 5px 0;
-                        border-radius: 6px;
-                    
-                        /* Position the tooltip text */
-                        position: absolute;
-                        z-index: 1;
-                        bottom: 125%;
-                        left: 50%;
-                        margin-left: -60px;
-                    
-                        /* Fade in tooltip */
-                        opacity: 0;
-                        transition: opacity 0.3s;
-                    }
-                    /* Tooltip arrow */
-                    .tooltip .tooltiptext::after{
-                        content: "";
-                        position: absolute;
-                        top: 100%;
-                        left: 50%;
-                        margin-left: -5px;
-                        border-width: 5px;
-                        border-style: solid;
-                        border-color: #555 transparent transparent transparent;
-                    }
-                    /* Show the tooltip text when you mouse over the tooltip container */
-                    .tooltip:hover .tooltiptext{
-                        visibility: visible;
-                        opacity: 1;
-                    }<!-- jQuerry  specific class selector-->
-                    .demo{
-                        position: relative
-                    }
-                    .loupe{
-                        background-color: #555;
-                        background: rgba(0, 0, 0, 0.25);
-                        border: 2px solid rgba(0, 0, 0, 0);
-                        cursor: url(blank.png), url(blank.cur), none;
-                    }
-                               
-                </style>
+                <link rel="stylesheet" type="text/css" href="miscellany.css"/>
             </head>
-            <body>
+            <body id="gloss">
                 <div id="wrapper">
                     <div id="content_wrapper">
                         <div id="header">
-                            <!--This starts the header for the web page-->
                             <div id="mainnav">
                                 <ul>
-                                    <li class="bibliography">
-                                        <a href="../output tree/Bibliography.html">Bibliography</a>
+                                    <li class="bibliographic">
+                                        <a href="bibliography.html">Bibliography</a>
+                                    </li>
+                                    <li class="gloss">
+                                        <a href="#">Gloss</a>
                                     </li>
                                     <li class="about">
-                                        <a href="../output tree/About.html">About</a>
+                                        <a href="about.html">About</a>
                                     </li>
                                 </ul>
                             </div>
@@ -411,50 +186,34 @@
         <br/>
         <br/>
 
-        <b>Some interesting facts about our document: </b>
+        <b>Morphographical Analysis: </b>
         <br/>
         <br/>
-        <p>There are <xsl:value-of select="$expan"/> editor supplied expansion. This artificat
-            mentions <xsl:value-of select="$place"/> places and <xsl:value-of select="$people"/>
-            people.</p>
+        <p>There are <xsl:value-of select="$word"/> words, or word like phrases.</p>
+        <p>The nominative is used: <xsl:value-of select="$nominative"/> times.</p>
+        <p>The genitive is used: <xsl:value-of select="$genitive"/> times.</p>
+        <p>The dative is used: <xsl:value-of select="$dative"/> times.</p>
+        <p>The accusative is used: <xsl:value-of select="$accusative"/> times.</p>
+        <p>The ablative is used: <xsl:value-of select="$ablative"/> times.</p>
         <br/>
         <br/>
-        <!--
-        <xsl:choose>
-            <xsl:when test="$supplied_lost lt 2">
-                <p>Of those, <xsl:value-of select="$supplied_lost"/> is a lost element;</p>                
-            </xsl:when>
-            <xsl:otherwise>
-                <p>Of those, <xsl:value-of select="$supplied_lost"/> are lost elements;</p>    
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:choose>
-            <xsl:when test="$supplied_undefined lt 2">
-                <p> and <xsl:value-of select="$supplied_undefined"/> is an undefined element.</p>  
-            </xsl:when>
-            <xsl:otherwise><p> and <xsl:value-of select="$supplied_undefined"/> are undefined elements.</p></xsl:otherwise>
-        </xsl:choose>
-        
-        <p>That is, our sample consists of
-            <xsl:value-of select="100 * $supplied_lost div $num_supplied "/>%
-            lost elements and
-            <xsl:value-of select="round( 100 * $supplied_undefined div $num_supplied )"/>%
-            undefined elements.  Of these supplied elements our editor felt that <xsl:value-of select="$high_cert"/> were of high certainty.</p>
-        <p>There are <xsl:value-of select="$text - $note + $apex"/> total characters.</p>
-        <p>Of those, <xsl:value-of select="$interpunct"/> are interpuncts and <xsl:value-of select="$apex"/> are apexes.</p>
-        <p>Which means that <xsl:value-of select="round(100 * $interpunct div ($text - $note + $apex)) "/>% are interpuncts and <xsl:value-of select="round(100 * $apex div ($text - $note + $interpunct))"/>% are apexes!</p>
-        <xsl:if test="round(100 * $interpunct div $text) gt 17">
-           <p>(Clearly our inscriber loved interpuncts)</p> 
-        </xsl:if>
+        <b>Contextual Analysis:</b>
         <br/>
-        <br/-->
+        <br/>
+        <p>This artificat mentions <xsl:value-of select="$place"/> places and <xsl:value-of
+                select="$people"/> people.</p>
+        <br/>
+
+
     </xsl:template>
 
 
     <!-- P and AB -->
 
     <xsl:template match="p">
-       <p><xsl:apply-templates/></p>
+        <p>
+            <xsl:apply-templates/>
+        </p>
     </xsl:template>
 
     <xsl:template match="ab">
@@ -474,6 +233,12 @@
     </xsl:template>
 
     <!-- TRANSCRIPTION -->
+
+    <xsl:template match="orgName">
+        <span style="color:#CD853F;">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
 
     <xsl:template match="placeName">
         <span style="color: #ff8000;">
@@ -577,18 +342,18 @@
                         <xsl:attribute name="href">
                             <xsl:value-of select="@lemmaRef"/>
                         </xsl:attribute>
-                        <span class="tooltiptext"><xsl:value-of select="@ana"/> form of <xsl:value-of
-                            select="@lemma"/></span>
+                        <span class="tooltiptext"><xsl:value-of select="@ana"/> form of
+                                <xsl:value-of select="@lemma"/></span>
                         <xsl:apply-templates/>
-                    </a>              
+                    </a>
                 </xsl:when>
                 <xsl:otherwise>
                     <span class="tooltiptext"><xsl:value-of select="@ana"/> form of <xsl:value-of
-                        select="@lemma"/></span>
+                            select="@lemma"/></span>
                     <xsl:apply-templates/>
                 </xsl:otherwise>
-            </xsl:choose>   
-        </span>  
+            </xsl:choose>
+        </span>
     </xsl:template>
 
     <xsl:template match="//ref[@target]">

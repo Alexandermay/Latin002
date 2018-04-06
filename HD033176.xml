@@ -17,6 +17,14 @@
                         <repository>museum/archive</repository>
                         <idno>inventory number</idno>
                     </msIdentifier>
+                     <msContents>
+                        <textLang mainLang="lat"/>
+                        <!-- arc, grc, he, lat, und (unknown),  zxx (non-linguistic content) -->
+                        <msItem class="#funerary.epitaph #verse">
+                            <!-- short summary of the content of an inscription -->
+                            <p>Commemoration of a Roman Public Official, Aquileia.</p>
+                        </msItem>
+                    </msContents>
                     <physDesc>
                         <objectDesc ana="#slab">
                             <supportDesc ana="#stone.marble">
@@ -24,9 +32,9 @@
                                     <p>Statue base made of marble with profile-framed inscription
                                         field.</p>
                                     <dimensions type="surface" unit="cm">
-                                        <height>99</height>
-                                        <width>64.5</width>
-                                        <depth>23</depth>
+                                        <height>100.5</height>
+                                        <width>64</width>
+                                        <depth>22.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition ana="#complete">
@@ -35,13 +43,12 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout columns="1" writtenLines="6">
-                                    <p>There is one column and 20 lines. The letters decrease in
-                                        size down the rows of text.</p>
+                                    <p>There is one column and 20 lines.</p>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>description of letters, possibly including <height>letter-heights</height>
+                            <handNote>The letters decrease in size down the rows of text. <height>4.5 - 2 cm</height>
                             </handNote>
                         </handDesc>
                     </physDesc>
@@ -51,11 +58,10 @@
                             <origDate>122 BCE – 150 BCE</origDate>
                         </origin>
                         <provenance type="found"> Aquileia
-                        </provenance>
-                       
+                       </provenance>                     
                     </history>
                 </msDesc>
-            </sourceDesc>
+            </sourceDesc> 
         </fileDesc>
     </teiHeader>
    <facsimile>
@@ -79,12 +85,12 @@
                     <lb n="9" break="no"/><expan><abbr>vinc</abbr><ex>iae</ex></expan></w> <placeName ref="https://pleiades.stoa.org/places/981524"><w lemma="Germana" ana="Genitive fem. sing."><expan><abbr>German</abbr><ex>iae</ex></expan></w><w lemma="inferior" ana="Genitive fem. sing."><expan><abbr>inferior</abbr><ex>is</ex></expan></w></placeName>
                     <lb n="10"/><w lemma="Legatus Augusti pro praetore" ana="Dative masc. sing." lemmaRef="https://en.wikipedia.org/wiki/Legatus_Augusti_pro_praetore"><expan><abbr>leg</abbr><ex>ato</ex></expan> pro <expan><abbr>pr</abbr><ex>aetore</ex></expan></w> <w lemma="provincia" ana="Genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dprovincia"><expan><abbr>provinc</abbr><ex>iae</ex></expan></w> <placeName ref="https://pleiades.stoa.org/places/992078"><w lemma="Thracia" ana="Genitive fem. sing."><expan><abbr>Thrac</abbr><ex>iae</ex></expan></w></placeName>
                     <lb n="11"/><w lemma="legatus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dlegatus"><expan><abbr>leg</abbr><ex>ato</ex></expan></w> <orgName ref="https://en.wikipedia.org/wiki/Legio_I_Adiutrix"><w lemma="Legio prima adiutrix" ana="Genitive"><expan><abbr>leg</abbr><ex>ionis</ex></expan> I Adiutricis</w></orgName>
-                    <lb n="12"/><w lemma="Queastor" ana="Dative" lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dquaestor"><expan>quaest<abbr/><ex>ori</ex></expan></w><w lemma="provincia" ana="Genitive" lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dprovincia"><expan><abbr>provinc</abbr><ex>iae</ex></expan></w> <placeName ref="https://pleiades.stoa.org/places/981531"><w lemma="Macedonia" ana="Genitive"><expan><abbr>Maced</abbr><ex>oniae</ex></expan></w></placeName>
-                    <lb n="13"/><w lemma="curator" ana="Dative" lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dcurator"><expan><abbr>curat</abbr><ex>ori</ex></expan></w> <w lemma="via" ana="Genitive pural fem." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dvia">viarum</w> <placeName ref="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0064%3Aalphabetic+letter%3DU%3Aentry+group%3D5%3Aentry%3Dvia-cassia-geo"><w lemma="Via Cassia" ana="Genitive fem. sing.">Cassiae</w></placeName>
+                    <lb n="12"/><w lemma="Queastor" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dquaestor"><expan>quaest<abbr/><ex>ori</ex></expan></w><w lemma="provincia" ana="Genitive" lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dprovincia"><expan><abbr>provinc</abbr><ex>iae</ex></expan></w> <placeName ref="https://pleiades.stoa.org/places/981531"><w lemma="Macedonia" ana="Genitive"><expan><abbr>Maced</abbr><ex>oniae</ex></expan></w></placeName>
+                    <lb n="13"/><w lemma="curator" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dcurator"><expan><abbr>curat</abbr><ex>ori</ex></expan></w> <w lemma="via" ana="Genitive pural fem." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dvia">viarum</w> <placeName ref="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0064%3Aalphabetic+letter%3DU%3Aentry+group%3D5%3Aentry%3Dvia-cassia-geo"><w lemma="Via Cassia" ana="Genitive fem. sing.">Cassiae</w></placeName>
                     <lb n="14"/><placeName ref="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0064:entry=via-clodia-geo&amp;highlight=clodia"><w lemma="Via Clodia" ana="Genitive sing. fem.">Clodiae</w></placeName> <placeName ref="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0064:entry=via-ciminia-geo&amp;highlight=ciminia"><w lemma="Via Ciminia" ana="Genitive sing. fem.">Ciminiae</w></placeName> <placeName ref="https://en.wikipedia.org/wiki/Via_Traiana_Nova"><w lemma="Via Traiana Nova" ana="Genitive fem. sing.">novae
-                    <lb n="15"/>Traianae</w></placeName> <w lemma="Candidatus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dcandidatus">candidato</w> <w lemma="divus, i" ana="Adj. genitive masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Ddivus1">divi</w>
+                    <lb n="15"/>Traianae</w></placeName> <w lemma="Candidatus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dcandidatus">candidato</w> <w lemma="divus, i" ana="Adj. Genitive masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Ddivus1">divi</w>
                     <lb n="16"/><persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/traianus-e1218650?s.num=1&amp;s.f.s2_parent=s.f.book.brill-s-new-pauly&amp;s.q=Trajan#e1218660"><w lemma="Traianus" ana="Genitive masc. sing.">Traiani</w></persName> <w lemma="tribunus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dtribunus"><expan><abbr>trib</abbr><ex>uno</ex></expan></w> <w lemma="miles" ana="Genitive pl. masc." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dmiles"><expan><abbr>mil</abbr><ex>itum</ex></expan></w> <orgName ref="https://en.wikipedia.org/wiki/Legio_XXII_Primigenia"><w lemma="Legio XXII Primigenia" ana="Genitive fem. sing."><expan><abbr>leg</abbr><ex>ionis</ex></expan> XXII
-                    <lb n="17"/><expan><abbr>Primigen</abbr><ex>iae</ex></expan></w></orgName> <w lemma="Pius, a, um" ana="Adj. genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dpius"><expan><abbr>p</abbr><ex>iae</ex></expan></w> <w lemma="Fidelis" ana="Adj. genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dfidelis"><expan><abbr>f</abbr><ex>idelis</ex></expan></w> <w lemma="Praetor" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dpraetor"><expan><abbr>praet</abbr><ex>ori</ex></expan></w><w lemma="tribunus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dtribunus"><expan><abbr>trib</abbr><ex>uno</ex></expan></w>
+                    <lb n="17"/><expan><abbr>Primigen</abbr><ex>iae</ex></expan></w></orgName> <w lemma="Pius, a, um" ana="Adj. Genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dpius"><expan><abbr>p</abbr><ex>iae</ex></expan></w> <w lemma="Fidelis" ana="Adj. Genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dfidelis"><expan><abbr>f</abbr><ex>idelis</ex></expan></w> <w lemma="Praetor" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dpraetor"><expan><abbr>praet</abbr><ex>ori</ex></expan></w><w lemma="tribunus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dtribunus"><expan><abbr>trib</abbr><ex>uno</ex></expan></w>
                     <lb n="18"/><w lemma="Plebs" ana="Genitive fem. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dplebs"><expan><abbr>pleb</abbr><ex>is</ex></expan></w> <orgName ref="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0060:entry=triumvir&amp;highlight=iiivir"><w lemma="III vir" ana="Dative masc. sing">III <expan><abbr>vir</abbr><ex>o</ex></expan> capitali</w></orgName><note>The <emph>triumvir capitales</emph> were the superintendents of public prisons and of the police.</note>
                     <lb n="19"/><w lemma="Patronus" ana="Dative masc. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dpatronus">patrono</w>
                     <lb n="20"/><w lemma="Dēcrētum" ana="Ablative, neut. sing." lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Ddecretum"><expan><abbr>d</abbr><ex>ecreto</ex></expan></w> <w lemma="decuriō" ana="Genative plural" lemmaRef="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Ddecurio2"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></w>
@@ -94,29 +100,38 @@
                 <p>external apparatus criticus (if applicable)</p>
             </div>
             <div type="translation">
-                <p>To Aulus Platorius Nepos, son of Aulus,</p>
-                <p>from the (family) <ref target="https://en.wikipedia.org/wiki/Sergia_(gens)">Sergia</ref></p> 
-                <p>Aponius Italicus Manilianus,</p>
-                <p>Caius Licinius Pollio</p> 
-                <p>Consul, Augur</p>
-                <p>Envoy of the Emperor of the Provenance of Britania</p> 
-                <p>Envoy of the Emperor of the Provenance of Germania the Lower</p> 
-                <p>Envoy of the Emperor of the Provenance Thrace</p> 
-                <p>Lieutenant-general of <emph>Legio I Adiutrix</emph></p> 
-                <p>Quaestor <note>Originally two deputies of the consuls, to investigate and try capital crimes. Their number was gradually increased to 40. Most were employed in the provinces. See: <ref target="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dquaestor">Charlton T. Lewis, An Elementary Latin Dictionary</ref> </note> of the provenance of Macedonia,</p> 
-                <p>Overseer of the roads: Cassia, Clodia</p> 
-                <p>Ciminia, [and] the New Trajan;</p> 
-                <p>Candidate of the divine Trajan,</p> 
-                <p>Tribune of the army of Fortune's <note>Literally firstborn.</note> XXII Legion</p>
-                <p>(the pius, the faithful)</p>
-                <p>Chief tribune of the people, a member of the <emph>triumvir capitales</emph>,</p>
-                <p>Protector, by means of decree of members of the municipal senate.</p>
+                <ab>
+                <lb n="1"/>To <persName ref="http://referenceworks.brillonline.com/entries/brill-s-new-pauly/platorius-e927310">Aulus Platorius Nepos, son of Aulus,
+                <lb n="2"/>from the (family) Sergia 
+                <lb n="3"/>Aponius Italicus Manilianus,
+                <lb n="4"/>Caius Licinius Pollio</persName>
+                <lb n="5"/>Consul, Augur
+                <lb n="6"/>Envoy of the Emperor of the 
+                <lb n="7"/><placeName>Provenance of Britania</placeName> 
+                <lb n="8"/>Envoy of the Emperor of the 
+                <lb n="9"/><placeName>Provenance of Germania the Lower</placeName> 
+                <lb n="10"/>Envoy of the Emperor of the <placeName>Provenance Thrace</placeName> 
+                <lb n="11"/>Lieutenant-general of <orgName>the First Legion, Adiutrix</orgName> 
+                <lb n="12"/>Quaestor <note>Originally two deputies of the consuls, to investigate and try capital crimes. Their number was gradually increased to 40. Most were employed in the provinces. See: <ref target="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dquaestor">Charlton T. Lewis, An Elementary Latin Dictionary</ref> </note> of the <placeName>provenance of Macedonia</placeName>, 
+                <lb n="13"/>Overseer of the roads: <placeName>Cassia</placeName>, <placeName>Clodia</placeName> 
+                <lb n="14"/><placeName>Ciminia</placeName>, [and] <placeName>the New Trajan</placeName>; 
+                <lb n="15"/>Candidate of the divine <persName>Trajan</persName>, 
+                <lb n="16"/>Tribune of the army of <orgName>Fortune's <note>Literally firstborn.</note> XXII Legion</orgName>
+                <lb n="17"/>(the pius, the faithful)
+                <lb n="18"/>Chief tribune of the people, a member of the <orgName>triumvir capitales</orgName>,
+                <lb n="19"/>Protector, 
+                <lb n="20"/>by means of decree of members of the municipal senate.
+                </ab>
             </div>
             <div type="commentary">
-                <p>To Rome I have given time and distance: and this memorial shows it by listing </p>
+                
+                <p><emph>"For these I set no limits, world or time, But make a gift of empire without end."--Virgil, the Aenied</emph></p>
+               
+                
             </div>
             <div type="bibliography">
-                <p>bibliography of previous editions, discussion, etc.</p>
+                <p>Gordon, Arthur E. <ref target="https://tufts-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01TUN_ALMA21107087550003851&amp;context=L&amp;vid=01TUN&amp;search_scope=EVERYTHING&amp;tab=everything&amp;lang=en_US"><emph>Illustrated Introduction to Latin Epigraphy.</emph></ref> Berkeley: University of California Press, 1983. P. 140.</p>
+                <p>Lewis, Charlton T., and Kingery, Hugh Macmaster. <ref target="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dquaestor"><emph>An Elementary Latin Dictionary.</emph></ref> New York: American Book, 1918.</p>
             </div>
         </body>
     </text>
