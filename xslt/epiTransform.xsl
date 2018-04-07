@@ -26,13 +26,13 @@
     <xsl:variable name="expan" select="count(//expan)"/>
     <xsl:variable name="place" select="count(//div[@type = 'edition']/ab/placeName)"/>
     <xsl:variable name="people" select="count(//div[@type = 'edition']/ab/persName)"/>
-    <xsl:variable name="word" select="count(.//w)"/>
-    <xsl:variable name="nominative" select="count(//w[contains(@ana, 'Nominative')])"/>
-    <xsl:variable name="genitive" select="count(//w[contains(@ana, 'Genitive')])"/>
-    <xsl:variable name="dative" select="count(//w[contains(@ana, 'Dative')])"/>
-    <xsl:variable name="accusative" select="count(//w[contains(@ana, 'Accusative')])"/>
-    <xsl:variable name="ablative" select="count(//w[contains(@ana, 'Ablative')])"/>
-
+    <xsl:variable name="word" select="count(//div[@type = 'edition']/ab//w)"/>
+    <xsl:variable name="nominative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Nominative')])"/>
+    <xsl:variable name="genitive" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Genitive')])"/>
+    <xsl:variable name="dative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Dative')])"/>
+    <xsl:variable name="accusative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Accusative')])"/>
+    <xsl:variable name="ablative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Ablative')])"/>
+    
     <!-- This template writes the entire document into an HTML page -->
 
     <!-- We are matching the root, if there is a root, then we are going to input some literal content, in this case, some html  -->
@@ -42,7 +42,6 @@
                 <title>
                     <xsl:value-of select=".//title"/>
                 </title>
-
                 <!-- CSS for our web page -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <link rel="stylesheet" type="text/css" href="miscellany.css"/>
@@ -56,14 +55,18 @@
                                     <li class="bibliographic">
                                         <a href="bibliography.html">Bibliography</a>
                                     </li>
+                                    <li class="translation">
+                                        <a href="translation.html">Translation</a>
+                                    </li>
                                     <li class="gloss">
-                                        <a href="#">Gloss</a>
+                                        <a href="#">Transcription</a>
                                     </li>
                                     <li class="about">
                                         <a href="about.html">About</a>
                                     </li>
                                 </ul>
                             </div>
+                            <h4 style="text-align:left;margin-top:-70px;margin-left:8em;">Latin Epigraphy</h4>
                         </div>
                         <div id="content_main">
                             <xsl:apply-templates/>
@@ -89,11 +92,12 @@
         <!-- This apply-template writes the text itself into the document, after the facsimile. -->
 
         <xsl:apply-templates select="//text"/>
+        
 
         <xsl:if test="$inline-notes = 0">
             <hr/>
             <b>Notes</b>
-            <xsl:apply-templates select="//note" mode="endnote"/>
+            <xsl:apply-templates select="//div[@type = 'edition']//note" mode="endnote"/>
         </xsl:if>
 
     </xsl:template>
@@ -114,7 +118,8 @@
     <xsl:template match="//msDesc"/>
     <xsl:template match="//sourceDesc"/>
     <xsl:template match="body/div[@type = 'apparatus']"/>
-
+    <xsl:template match="body/div[@type = 'commentary']"/>
+    <xsl:template match="body/div[@type = 'translation']"/>
 
     <!-- Display these tei elements -->
 
@@ -167,25 +172,6 @@
         <p style="color:#2E9AFE">This is a personal name</p>
         <p style="color:#CD853F;">This is a corporate entity, like a legion or office</p>
         <br/>
-    </xsl:template>
-
-    <xsl:template match="//body/div[@type = 'commentary']">
-        <b>Commentary: </b>
-        <br/>
-        <br/>
-        <xsl:apply-templates/>
-        <br/>
-        <br/>
-    </xsl:template>
-
-    <xsl:template match="//body/div[@type = 'translation']">
-        <b>Translation: </b>
-        <br/>
-        <br/>
-        <xsl:apply-templates/>
-        <br/>
-        <br/>
-
         <b>Morphographical Analysis: </b>
         <br/>
         <br/>
@@ -196,17 +182,23 @@
         <p>The accusative is used: <xsl:value-of select="$accusative"/> times.</p>
         <p>The ablative is used: <xsl:value-of select="$ablative"/> times.</p>
         <br/>
-        <br/>
         <b>Contextual Analysis:</b>
         <br/>
         <br/>
         <p>This artificat mentions <xsl:value-of select="$place"/> places and <xsl:value-of
-                select="$people"/> people.</p>
+            select="$people"/> people.</p>
         <br/>
-
-
     </xsl:template>
-
+<!--
+    <xsl:template match="//body/div[@type = 'translation']">
+        <b>Translation: </b>
+        <br/>
+        <br/>
+        <xsl:apply-templates/>
+        <br/>
+        <br/>
+    </xsl:template>
+-->
 
     <!-- P and AB -->
 
@@ -302,7 +294,7 @@
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
             <xsl:attribute name="target">
-                <xsl:value-of select="@ref"/>
+                _blank
             </xsl:attribute>
             <xsl:apply-templates/>
         </a>
@@ -315,7 +307,7 @@
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
             <xsl:attribute name="target">
-                <xsl:value-of select="@ref"/>
+                _blank
             </xsl:attribute>
             <xsl:apply-templates/>
         </a>
@@ -328,7 +320,7 @@
                 <xsl:value-of select="@ref"/>
             </xsl:attribute>
             <xsl:attribute name="target">
-                <xsl:value-of select="@ref"/>
+                _blank
             </xsl:attribute>
             <xsl:apply-templates/>
         </a>
@@ -341,6 +333,9 @@
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="@lemmaRef"/>
+                        </xsl:attribute>
+                        <xsl:attribute name="target">
+                            _blank
                         </xsl:attribute>
                         <span class="tooltiptext"><xsl:value-of select="@ana"/> form of
                                 <xsl:value-of select="@lemma"/></span>
@@ -362,7 +357,7 @@
                 <xsl:value-of select="@target"/>
             </xsl:attribute>
             <xsl:attribute name="target">
-                <xsl:value-of select="@rend"/>
+                _blank
             </xsl:attribute>
             <xsl:apply-templates/>
         </a>

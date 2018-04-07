@@ -10,9 +10,10 @@
     margin: auto;
     color: white;
     background-color: #FFFFFE;
-    text-align: center;
+    text-align: left; 
     border-bottom: 1px solid gray;
 }
+
 #mainnav{
     font-size: 90%;
     font-weight: bold;
@@ -65,6 +66,11 @@
     color: #000;
 }
 
+#translation #mainnav li.translation a:link{
+    background-color: #d9d9d9;
+    color: #000;
+}
+
 body{
     background: #ffffff;
     font-size: 85%;
@@ -73,6 +79,7 @@ body{
     margin: auto;
     line-height: 1.33em
 }
+
 h1{
     font-size: 185%;
     color: #000000;
@@ -169,9 +176,6 @@ a:hover.bibLink{
     color: black;
     text-decoration: underline;
 }
-
-
-
 
 /* Tooltip container */
 .tooltip{
