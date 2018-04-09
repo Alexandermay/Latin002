@@ -10,7 +10,7 @@
     margin: auto;
     color: white;
     background-color: #FFFFFE;
-    text-align: left; 
+    text-align: left;
     border-bottom: 1px solid gray;
 }
 
@@ -228,6 +228,6 @@ jQuerry specific class selector-- >
     background-color: #555;
     background: rgba(0, 0, 0, 0.25);
     border: 2px solid rgba(0, 0, 0, 0);
-    cursor: url(blank.png), url(blank.cur), none;
+    cursor: none;
 }
 

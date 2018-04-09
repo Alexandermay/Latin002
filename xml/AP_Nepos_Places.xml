@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Places mentioned in HD03376; Epigraph to A.P. Nepos, a Roman Official.</title>
+            <author>
+               <persName>Unknown.</persName>
+            </author>
+
+         </titleStmt>
+         <publicationStmt>
+            <ab>currently for internal use only</ab>
+         </publicationStmt>
+         <sourceDesc>
+            <ab/>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text xml:id="gazetteer">
+      <body>
+         <listPlace>
+            <place xml:id="A1">
+               <placeName type="editors">Britannia</placeName>
+               <placeName type="parsed">
+                  <region type="country">United Kingdom</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="991322" type="toponymName">Britannia</placeName>
+               <location type="structured">
+                  <country key="UK">United Kingdom</country>
+               </location>
+               <location type="point">
+                  <geo>52.5000000 -2.5000000</geo>
+               </location>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Roman_Britain"/>
+               </note>
+               <note type="editors">"Roman Britain (Latin: Britannia or, later, Britanniae, "the
+                  Britains") was the area of the island of Great Britain that was governed by the
+                  Roman Empire, from 43 to 410 AD. It comprised all of England, the majority of
+                  Wales and, for short periods of time, parts of eastern Scotland."</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A2">
+               <placeName type="editors">Germania Inferior</placeName>
+               <placeName type="parsed">
+                  <region type="country">Lower Germany</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="981524" type="toponymName">Germania Inferior</placeName>
+               <location type="structured">
+                  <country key="Ger">Germany</country>
+               </location>
+               <location type="point">
+                  <geo>51.6057417075 5.7955395575</geo>
+               </location>
+               <population quantity="0"/>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Germania_Inferior"/>
+               </note>
+               <note type="editors"> "Provincia Germania Inferior, Germania Inferior ("Lower
+                  Germany") was a Roman province located on the west bank of the Rhine. According to
+                  Ptolemy, Germania Inferior included the Rhine from its mouth up to the mouth of
+                  the Obringa, a river identified with either the Aar or the Moselle. The territory
+                  included modern Luxembourg, the southern Netherlands, part of Belgium, and part of
+                  North Rhine-Westphalia in Germany, west of the Rhine."</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A3">
+               <placeName type="editors">Thrace</placeName>
+               <placeName type="parsed">
+                  <region type="country">Thrace</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="981552" type="toponymName">Thrace</placeName>
+               <location type="structured">
+                  <country key="Thr">Thrace</country>
+               </location>
+               <location type="point">
+                  <geo>43.5 23.5</geo>
+               </location>
+               <population quantity="0"/>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Thrace"/>
+               </note>
+               <note type="editors"> "During the imperial period many Thracians – particularly
+                  members of the local aristocracy of the cities – had been granted the right of the
+                  Roman citizenship (civitas Romana) with all his privileges. Epigraphic evidence
+                  show a large increase in such naturalizations in the times of Trajan and
+                  Hadrian"</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A4">
+               <placeName type="editors">Aquileia</placeName>
+               <placeName type="parsed">
+                  <region type="country">Italy</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="4957003" type="toponymName">Italy</placeName>
+               <location type="structured">
+                  <country key="Ita">Italy</country>
+               </location>
+               <location type="point">
+                  <geo>45.7692106667, 13.3688636667</geo>
+               </location>
+               <population quantity="0"/>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Aquileia"/>
+               </note>
+               <note type="editors"> "Aquileia is an ancient Roman city in Italy, at the head of the
+                  Adriatic at the edge of the lagoons, about 10 kilometres (6 mi) from the sea, on
+                  the river Natiso (modern Natisone), the course of which has changed somewhat since
+                  Roman times. Today, the city is small (about 3,500 inhabitants), but it was large
+                  and prominent in Antiquity as one of the world's largest cities with a population
+                  of 100,000 in the 2nd century CE and is one of the main archeological sites
+                  of Northern Italy."</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A5">
+               <placeName type="editors">Macedonia</placeName>
+               <placeName type="parsed">
+                  <region type="country">Macedonia</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="981531" type="toponymName">Macedonia</placeName>
+               <location type="structured">
+                  <country key="MA-03">Macedonia</country>
+               </location>
+               <location type="point">
+                  <geo>42.5 22.5</geo>
+               </location>
+               <population quantity="0"/>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia"
+                     target="https://en.wikipedia.org/wiki/Macedonia_(Roman_province)"/>
+               </note>
+               <note type="editors"> "The Roman province of Macedonia (Latin: Provincia Macedoniae,
+                  was officially established in 146 BC, after the Roman
+                  general Quintus Caecilius Metellus defeated Andriscus of Macedon, the last
+                  self-styled King of the ancient kingdom of Macedonia in 148 BC, and after the four
+                  client republics (the "tetrarchy") established by Rome in the region were
+                  dissolved."</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A6">
+               <placeName type="editors">Via Cassia</placeName>
+               <placeName type="parsed">
+                  <region type="country">Italy</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="447759107" type="toponymName">Italy</placeName>
+               <location type="structured">
+                  <country key="IT-03">Italy</country>
+               </location>
+               <location type="point">
+                  <geo>42.703811225 11.883090198</geo>
+               </location>
+               <population quantity="0"/>
+               <trait/>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Via_Cassia"/>
+               </note>
+               <note type="editors"> "An ancient Roman road branching off from the Via Flaminia and
+                  continuing to Luna where it joined the Via Aurelia. The Via Cassia post-dates the
+                  Via Amerina and was built after 240 B.C. It combined new construction with re-use
+                  of pre-existing roads and tracks."</note>
+            </place>
+         </listPlace>
+         <listPlace>
+            <place xml:id="A7">
+               <placeName type="editors">Via Clodia</placeName>
+               <placeName type="parsed">
+                  <region type="country">Italy</region>
+                  <settlement type="city"/>
+               </placeName>
+               <placeName key="737328394" type="toponymName">Italy</placeName>
+               <location type="structured">
+                  <country key="IT-03">Italy</country>
+               </location>
+               <location type="point">
+                  <geo>42.356162788, 11.9986433144</geo>
+               </location>
+               <population quantity="0"/>
+               <trait>
+                  <label>elevation</label>
+                  <desc>
+                     <measure unit="ft" quantity="81"/>
+                  </desc>
+               </trait>
+               <note type="geonames">
+                  <ptr type="Wikipedia" target="https://en.wikipedia.org/wiki/Via_Clodia"/>
+               </note>
+               <note type="editors"> "The Via Clodia was an ancient high-road of Italy. Situated
+                  between the Via Cassia and the Via Aurelia, it is different from them notably in
+                  that the latter were designed primarily for military long-haul, irrespective of
+                  settlements they met, but the Via Clodia was of short-range, intended for
+                  commercial traffic with the colonies in Etruscan lands." </note>
+            </place>
+         </listPlace>
+      </body>
+   </text>
+</TEI>
