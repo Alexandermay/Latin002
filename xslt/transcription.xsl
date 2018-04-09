@@ -16,20 +16,17 @@
     <!-- A variable for inline notes in which we set its initial value at 0.
     -->
     <xsl:variable name="inline-notes">0</xsl:variable>
+    <!-- Variables for counting.
+    -->
     <xsl:variable name="expan" select="count(//expan)"/>
     <xsl:variable name="place" select="count(//div[@type = 'edition']/ab/placeName)"/>
     <xsl:variable name="people" select="count(//div[@type = 'edition']/ab/persName)"/>
     <xsl:variable name="word" select="count(//div[@type = 'edition']/ab//w)"/>
-    <xsl:variable name="nominative"
-        select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Nominative')])"/>
-    <xsl:variable name="genitive"
-        select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Genitive')])"/>
-    <xsl:variable name="dative"
-        select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Dative')])"/>
-    <xsl:variable name="accusative"
-        select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Accusative')])"/>
-    <xsl:variable name="ablative"
-        select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Ablative')])"/>
+    <xsl:variable name="nominative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Nominative')])"/>
+    <xsl:variable name="genitive" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Genitive')])"/>
+    <xsl:variable name="dative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Dative')])"/>
+    <xsl:variable name="accusative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Accusative')])"/>
+    <xsl:variable name="ablative" select="count(//div[@type = 'edition']/ab//w[contains(@ana, 'Ablative')])"/>
     <!-- This template writes the entire document into an HTML page -->
     <xsl:template match="/">
         <html>
